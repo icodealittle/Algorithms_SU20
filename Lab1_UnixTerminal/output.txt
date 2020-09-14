@@ -1,0 +1,101 @@
+# Simply copy and paste the output from your terminal here
+
+-bash-4.2$ ls
+Algorithms  CS5006_SU20_Assignment1  CS5006_SU20_Lab
+-bash-4.2$ mkdir new
+-bash-4.2$ cd Algorithms/
+-bash-4.2$ mkdir Test_output
+-bash-4.2$ rmdir Test_output
+-bash-4.2$ ls
+Algorithms_SU2020_schea24  CS5006_SP20  CS5006_SU20  CS5006_SU20_schea24
+-bash-4.2$ cat main.py
+cat: main.py: No such file or directory
+-bash-4.2$ cd Algorithms_SU2020_schea24/
+-bash-4.2$ cd Lab1_UnixTerminal/
+-bash-4.2$ cat main.c
+// Add your program here!
+
+#include <stdio.h>
+
+//Create a function for the base and n exponential
+double power(double base, double n){
+
+	double result = 1; //Declare a value for the result. For example, power(2, 2) = 4.
+
+	int i = 1; //Declaring a variable
+
+	for (i = 1; i <= n; i++){ //Loop to find the exponent value
+
+		result *= base;
+	}
+
+	return result; //return the result of the exponent power. 
+}
+
+int main(){
+
+int i = 1; //Declaring a variable
+ 
+for (i = 1; i <= 10; i++){ //Loop to find the exponent
+
+double pResult = power(2, i); //Declare the value for i that was assigned in the loop above.
+
+printf("2^%i is  %f\n", i, pResult); //Print statement
+
+}
+
+return 0;
+
+}
+
+
+-bash-4.2$ nl main.c
+     1	// Add your program here!
+       
+     2	#include <stdio.h>
+       
+     3	//Create a function for the base and n exponential
+     4	double power(double base, double n){
+       
+     5		double result = 1; //Declare a value for the result. For example, power(2, 2) = 4.
+       
+     6		int i = 1; //Declaring a variable
+       
+     7		for (i = 1; i <= n; i++){ //Loop to find the exponent value
+       
+     8			result *= base;
+     9		}
+       
+    10		return result; //return the result of the exponent power. 
+    11	}
+       
+    12	int main(){
+       
+    13	int i = 1; //Declaring a variable
+    14	 
+    15	for (i = 1; i <= 10; i++){ //Loop to find the exponent
+       
+    16	double pResult = power(2, i); //Declare the value for i that was assigned in the loop above.
+       
+    17	printf("2^%i is  %f\n", i, pResult); //Print statement
+       
+    18	}
+       
+    19	return 0;
+       
+    20	}
+       
+       
+-bash-4.2$ mkdir test_file
+-bash-4.2$ ls
+ExternalResources  images  main  main.c  output.txt  README.md  test_file
+-bash-4.2$ rmdir test_file/
+-bash-4.2$ ls
+ExternalResources  images  main  main.c  output.txt  README.md
+-bash-4.2$ vim output.txt 
+
+-bash-4.2$ grep 'power' main.c
+double power(double base, double n){
+	double result = 1; //Declare a value for the result. For example, power(2, 2) = 4.
+	return result; //return the result of the exponent power. 
+double pResult = power(2, i); //Declare the value for i that was assigned in the loop above.
